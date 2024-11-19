@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brightest_black"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context=".ui.AddNewNoteScreen">
+
+    <Button
+        android:id="@+id/addNoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/discovery"
+        android:text="Добавить"
+        android:textColor="@color/okolo_white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/bright_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:strokeColor="@color/purple_200"
+        app:strokeWidth="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/text_container"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="6">
+
+
+        <EditText
+            android:id="@+id/noteName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/purple_200"
+            android:ems="10"
+            android:hint="Название заметки"
+            android:inputType="text"
+            android:maxLength="15"
+            android:textColor="@color/okolo_white"
+            android:textColorLink="@color/purple_200" />
+
+        <EditText
+            android:id="@+id/noteType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/purple_200"
+            android:ems="10"
+            android:hint="Тип заметки"
+            android:inputType="text"
+            android:maxLength="10"
+            android:textColor="@color/okolo_white"
+            android:textColorLink="@color/purple_200" />
+
+        <EditText
+            android:id="@+id/shortDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/purple_200"
+            android:ems="30"
+            android:hint="Короткое описание"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="30"
+            android:maxLines="4"
+            android:textColor="@color/okolo_white"
+            android:textColorLink="@color/purple_200" />
+
+        <EditText
+            android:id="@+id/fullDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/purple_200"
+            android:ems="50"
+            android:hint="Полное описание"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="100"
+            android:maxLines="4"
+            android:textColor="@color/okolo_white"
+            android:textColorLink="@color/purple_200" />
+        <FrameLayout android:id="@+id/map_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/note_container_style">
+            <com.yandex.mapkit.mapview.MapView
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

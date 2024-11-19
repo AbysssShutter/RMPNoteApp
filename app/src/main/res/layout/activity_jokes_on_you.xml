@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Linear Layout-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/jokeMain"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="@color/brightest_black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/jokeTextViewPart1"
+        android:background="@drawable/note_container_style"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/jokeTextViewPart2"
+        android:background="@drawable/note_container_style"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>
